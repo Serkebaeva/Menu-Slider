@@ -18,3 +18,17 @@ toggle.addEventListener('click', showNav);*/
 toggle.addEventListener("click", () =>
   document.body.classList.toggle("show-nav")
 );
+
+open.addEventListener("click", function () {
+  modal.classList.add("show-modal");
+});
+
+close.addEventListener("click", function () {
+  modal.classList.remove("show-modal");
+});
+
+window.addEventListener("click", function (e) {
+  if (e.target == modal) {
+    modal.classList.remove("show-modal");
+  }
+});
